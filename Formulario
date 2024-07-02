@@ -1,0 +1,76 @@
+Cadastro de Cliente
+
+
+Dados Pessoais
+
+Nome Completo: [ ]
+Data de Nascimento: [ ]
+Gênero: [ ]
+CPF: [ ]
+Endereço Completo: [ ]
+Cidade: [ ]
+Estado: [ ]
+CEP: [ ]
+Telefone: [ ]
+E-mail: [ ]
+
+
+Conta de Acesso
+
+Nome de Usuário: [ ]
+Senha: [ ]
+Confirmar Senha: [ ]
+Compra de Produtos
+
+Seleção de Produtos
+
+Selecione os produtos desejados:
+Skates e Acessórios:
+ Skate Completo
+ Shape de Skate
+ Trucks
+ Rodas
+ Rolamentos
+ Lixa
+ Ferramentas
+Roupas:
+ Camisetas
+ Calças
+ Agasalhos
+ Bonés
+ Meias
+Tênis:
+ Tênis de Skate
+ Tênis Casual
+Acessórios:
+ Capacete
+ Joelheira
+ Cotoveleira
+ Mochilas
+ Outros:
+
+Forma de Pagamento
+
+Método de Pagamento: [ ]
+ Cartão de Crédito
+ Boleto Bancário
+ Transferência Bancária
+ PayPal
+ 
+Número do Cartão (se aplicável): [ ]
+Nome no Cartão (se aplicável): [ ]
+Data de Validade (se aplicável): [ ]
+Código de Segurança (CVV) (se aplicável): [ ]
+Gestão de Estoque
+
+Atualização de Estoque
+
+Registrar saída de produtos vendidos no sistema de estoque: [ ]
+Observações Adicionais
+
+[ ]
+Confirmação e Finalização
+
+Confirmação da Compra
+Concordo com os termos e condições de compra: [ ]
+Finalizar Compra
