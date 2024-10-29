@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de Pista de Skate</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .pista-img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        input[type="date"],
+        input[type="time"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #800000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button:hover {
+            background-color: #a60000;
+            transform: scale(1.05);
+        }
+
+        .error {
+            color: red;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Agendar Pista</h2>
+        <img src="img2.jpg" alt="Pista de Skate" class="pista-img"> <!-- Substitua 'pista.jpg' pela imagem correta -->
+        <form id="agendamento-form">
+            <label for="data">Selecione o Dia:</label>
+            <input type="date" id="data" required>
+            <label for="horario">Selecione o Horário:</label>
+            <input type="time" id="horario" required>
+            <label for="pessoas">Quantas Pessoas:</label>
+            <input type="number" id="pessoas" min="1" max="10" required>
+            <div id="error-message" class="error"></div>
+            <button type="submit">Confirmar Agendamento</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('agendamento-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio do formulário
+
+            const data = document.getElementById('data').value;
+            const horario = document.getElementById('horario').value;
+            const pessoas = document.getElementById('pessoas').value;
+            const errorMessage = document.getElementById('error-message');
+
+            errorMessage.textContent = ''; // Limpa mensagens de erro anteriores
+
+            // Verifica se a data e o horário foram selecionados
+            if (!data || !horario) {
+                errorMessage.textContent = 'Por favor, selecione uma data e um horário.';
+                return;
+            }
+
+            // Verifica se o horário está dentro do intervalo permitido (9h às 21h)
+            const selectedTime = new Date(`${data}T${horario}`);
+            const startLimit = new Date(`${data}T09:00`);
+            const endLimit = new Date(`${data}T21:00`);
+
+            // Verifica se o horário está no intervalo
+            if (selectedTime < startLimit || selectedTime > endLimit) {
+                errorMessage.textContent = 'O horário deve estar entre 9h e 21h.';
+                return;
+            }
+
+            // Verifica se o horário selecionado é válido para 1 hora
+            const endDateTime = new Date(selectedTime.getTime() + 60 * 60 * 1000); // 1 hora depois
+            const currentTime = new Date();
+
+            // Verifica se o horário está no futuro
+            if (selectedTime <= currentTime) {
+                errorMessage.textContent = 'O horário deve ser no futuro.';
+                return;
+            }
+
+            // Redireciona para a página de agradecimento
+            window.location.href = 'sucesso.html'; // Substitua pelo caminho correto do seu arquivo de agradecimento
+        });
+    </script>
+</body>
+</html>

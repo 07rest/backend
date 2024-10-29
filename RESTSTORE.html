@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento de Pista de Skate</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background: #000000;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        button {
+            padding: 30px 50px; /* Aumentando o tamanho */
+            background-color: #800000; /* Cor vibrante */
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            text-decoration: none; /* Remove underline */
+            border-radius: 5px; /* Bordas arredondadas */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+            transition: background-color 0.3s, transform 0.3s; /* Efeito de transição */
+        }
+
+        button:hover {
+            background-color: #c70029; /* Cor ao passar o mouse */
+            transform: scale(1.05); /* Efeito de aumento */
+        }
+
+        .image-gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .image-gallery img {
+            max-width: 200px; /* Tamanho máximo das imagens */
+            margin: 10px;
+            border-radius: 8px; /* Cantos arredondados */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #000000;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Agendamento de Pista de Skate</h1>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Bem-vindo!</h2>
+            <p>Aqui você pode agendar sua sessão na pista de skate. Confira as informações e faça seu login para começar!</p>
+        </section>
+        
+        <section>
+            <h3>Informações Importantes</h3>
+            <ul>
+                <li>Pista aberta de segunda a domingo.</li>
+                <li>Horários disponíveis: 9h às 21h.</li>
+                <li>Regras de segurança devem ser seguidas.</li>
+            </ul>
+        </section>
+
+        <section class="image-gallery">
+            <img src="img1.jpg" alt="Imagem de skate 1">
+            <img src="img2.jpg" alt="Imagem de skate 2">
+            <img src="img3.jpg" alt="Imagem de skate 3">
+            <img src="img4.jpg" alt="Imagem de skate 4">
+        </section>
+
+        <a href="login.html">
+            <button>Login</button>
+        </a>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Agendamento de Pista de Skate. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
